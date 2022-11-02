@@ -1,0 +1,25 @@
+<html>
+    <div id="my_box_realtime" style= "background-color: red; position: absolute; right: 70; bottom: 70; min-width: 100px; min-height: 100px"></div>
+    <script type="text/javascript">
+        function move () {
+            var redElem = document.getElementById('my_box_realtime');
+            var poe = 0;
+            var anim = setInterval(animate, 500);
+
+            function animate () {
+                if (poe == 380) {
+                    clearInterval(anim)
+                } else{
+                    poe--;
+                    redElem.style.bottom = poe+"px";
+                    redElem.style.right = poe+"px";
+                }
+                
+               
+            };
+            
+        };
+        move();
+        
+    </script>
+</html>
